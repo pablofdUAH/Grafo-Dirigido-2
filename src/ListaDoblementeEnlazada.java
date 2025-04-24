@@ -87,4 +87,14 @@ public class ListaDoblementeEnlazada<T> implements Lista<T> {
     public int getNumElementos(){
         return this.numElementos;
     }
+    public boolean contains(T elemento) {
+        Iterador<T> iterador = new IteradorDoblementeEnlazada<>(this);
+        while (iterador.hasNext()) {
+            T actual = iterador.next();
+            if (actual.equals(elemento)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

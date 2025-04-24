@@ -8,6 +8,8 @@ public class Nodo<D> {
     public Nodo(D dato, int ID) {
         this.dato = dato;
         this.ID = ID;
+        this.salida = new ListaDoblementeEnlazada<>();
+        this.entrada = new ListaDoblementeEnlazada<>();
     }
 
     public int getID() {
